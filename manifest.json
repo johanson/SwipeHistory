@@ -1,0 +1,12 @@
+{
+    "name": "SwipeHistory",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Navigate back and forward in history by using vertical scroll",
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "run_at": "document_start",
+        "js": ["inject.js"],
+        "match_about_blank": true
+    }]
+}
