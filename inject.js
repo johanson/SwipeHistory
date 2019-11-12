@@ -3,7 +3,7 @@ window.addEventListener("wheel",  direction);
 let sensitivity = 80;
 let animation = true;
 
-function inject_css {    
+function inject_css() {    
     const sheet = new CSSStyleSheet();
     sheet.replaceSync('body.swipeHistory { transition: opacity 0.2s; opacity: 0.2; overflow: hidden;' +
                       'backface-visibility: hidden; pointer-events: none; }');
@@ -22,7 +22,7 @@ function deattach() {
     }, 1000);
 }
 
-function direction () {
+function direction() {
     let x = event.deltaX;
     if (sensitivity == 0) {
         console.log("Sensitivity must be bigger than 0")
