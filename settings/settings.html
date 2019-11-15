@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Settings</title>
+</head>
+<body>
+
+<form id="settings">
+    <p>
+        <label for="sensitivity">
+            <input type="number" name="" id="sensitivity" value="50" min=1> Swiping sensitivity
+        </label>
+    </p>
+    <p>
+        <label for="animation">
+          <input type="checkbox" name="animation" id="animation" checked> Show animation when navigating
+        </label>
+    </p>
+    <p>
+        <input type="button" id="save" value="Save"> <input type="button" id="restore_defaults" value="Reset Settings">
+    </p>
+    <p id="message"></p>
+
+</form>
+
+<script src="settings.js"></script>
+
+</body>
+</html>

@@ -3,10 +3,25 @@
     "version": "1.0",
     "manifest_version": 2,
     "description": "Navigate back and forward in history by using vertical scroll",
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "run_at": "document_start",
-        "js": ["inject.js"],
-        "match_about_blank": true
-    }]
+    "author": "Rasmus Johanson",
+    "minimum_chrome_version": "75",
+    "options_ui": {
+        "page": "settings/settings.html",
+        "chrome_style": true
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "inject.js"
+            ],
+            "match_about_blank": true
+        }
+    ]
 }
