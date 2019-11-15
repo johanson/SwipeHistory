@@ -9,6 +9,9 @@
         "page": "settings/settings.html",
         "chrome_style": true
     },
+    "icons": {
+        "128": "assets/icon_128.png"
+    },
     "permissions": [
         "storage"
     ],
