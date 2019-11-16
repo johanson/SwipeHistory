@@ -36,6 +36,7 @@ function deattach() {
     if (conf.deattach_clear) {
         window.removeEventListener("wheel", poll_wheel);
         if (conf.rbtn_scroll) {
+            conf.right_click_down = false;
             window.removeEventListener("mousedown", poll_mouse);
             document.oncontextmenu = function () { return false; }
         }
@@ -45,7 +46,7 @@ function deattach() {
             document.body.classList.remove("swipeHistory");
             conf.deattach_clear = true;
             if (conf.rbtn_scroll) {
-                window.removeEventListener("mousedown", poll_mouse);
+                window.addEventListener("mousedown", poll_mouse);
                 document.oncontextmenu = function () { return true; }
             }
         }, 1250);

@@ -12,6 +12,10 @@
     "icons": {
         "128": "assets/icon_128.png"
     },
+    "browser_action": {
+        "default_popup": "settings/settings.html"
+      },
+     
     "permissions": [
         "storage"
     ],

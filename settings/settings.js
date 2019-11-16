@@ -1,7 +1,7 @@
 function save_options() {
     chrome.storage.sync.set({
         animation: document.getElementById('animation').checked,
-        sensitivity: document.getElementById('sensitivity').value.animation,
+        sensitivity: document.getElementById('sensitivity').value,
         rbtn_scroll: document.getElementById('rbtn_scroll').checked,
     }, function () {
         document.getElementById("message").innerHTML = "Settings saved. Please refresh your tab to see the effect.";
