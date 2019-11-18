@@ -54,18 +54,18 @@ function deattach() {
     conf.deattach_clear = false;
 }
 
-function poll_wheel() {
-    if (event.deltaX > conf.sensitivity || conf.right_click_down && event.deltaY < 0) {
+function poll_wheel(e) {
+    if (e.deltaX > conf.sensitivity || conf.right_click_down && e.deltaY < 0) {
         deattach();
         window.history.forward();
-    } else if (event.deltaX < -Math.abs(conf.sensitivity) || conf.right_click_down && event.deltaY > 0) {
+    } else if (e.deltaX < -Math.abs(conf.sensitivity) || conf.right_click_down && e.deltaY > 0) {
         deattach();
         window.history.back();
     }
 }
 
-function poll_mouse() {
-    conf.right_click_down = (event.which == 3) ? true : false;
+function poll_mouse(e) {
+    conf.right_click_down = (e.which == 3) ? true : false;
 }
 
 conf.init();
