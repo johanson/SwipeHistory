@@ -2,6 +2,10 @@ var conf = new function () {
 
     this.right_click_down = false;
     this.deattach_clear = true;
+    this.animation = true;
+    this.sensitivity = 50;
+    this.rbtn_scroll = false;
+    this.log = true;
 
     this.init = function () {
         chrome.storage.sync.get({
@@ -15,10 +19,10 @@ var conf = new function () {
             if (items.animation) conf.inject_css();
             if (items.rbtn_scroll) window.addEventListener("mousedown", poll_mouse);
         });
-        window.addEventListener("wheel", poll_wheel);
-    }
+        window.addEventListener("wheel", poll_wheel, );
+    }   
     this.set = function (name, val) {
-        this[name] = val;
+        conf[name] = val;
     }
     this.inject_css = function () {
         window.addEventListener('DOMContentLoaded', (event) => {
@@ -40,7 +44,11 @@ function deattach() {
             window.removeEventListener("mousedown", poll_mouse);
             document.oncontextmenu = function () { return false; }
         }
-        document.body.classList.add("swipeHistory");
+        try {
+            document.body.classList.add("swipeHistory");            
+        } catch (err) {
+            log(err.message);
+        }
         setTimeout(function () {
             window.addEventListener("wheel", poll_wheel);
             document.body.classList.remove("swipeHistory");
@@ -66,6 +74,10 @@ function poll_wheel(e) {
 
 function poll_mouse(e) {
     conf.right_click_down = (e.which == 3) ? true : false;
+}
+
+function log(message) {
+    if (conf.log) console.log("SwipeHistory:", message);
 }
 
 conf.init();
