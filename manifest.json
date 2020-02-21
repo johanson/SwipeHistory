@@ -2,7 +2,7 @@
     "name": "SwipeHistory",
     "version": "1.0",
     "manifest_version": 2,
-    "description": "Navigate back and forward in history by using vertical scroll",
+    "description": "Navigate back and forward in history with touchpad by using vertical scroll",
     "author": "Rasmus Johanson",
     "minimum_chrome_version": "75",
     "options_ui": {
@@ -15,7 +15,7 @@
     "browser_action": {
         "default_popup": "settings/settings.html"
       },
-     
+
     "permissions": [
         "storage"
     ],
