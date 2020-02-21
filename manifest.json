@@ -2,7 +2,7 @@
     "name": "SwipeHistory",
     "version": "1.0",
     "manifest_version": 2,
-    "description": "Navigate back and forward in history with touchpad by using vertical scroll",
+    "description": "Emulate macbook/chromebook (two finger) touchpad browser history navigation by abusing vertical scroll.",
     "author": "Rasmus Johanson",
     "homepage_url": "https://github.com/johanson/",
     "minimum_chrome_version": "75",
