@@ -4,6 +4,7 @@
     "manifest_version": 2,
     "description": "Navigate back and forward in history with touchpad by using vertical scroll",
     "author": "Rasmus Johanson",
+    "homepage_url": "https://github.com/johanson/",
     "minimum_chrome_version": "75",
     "options_ui": {
         "page": "settings/settings.html",
