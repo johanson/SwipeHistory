@@ -17,6 +17,7 @@ function restore_options() {
         document.getElementById('animation').checked = items.animation;
         document.getElementById('sensitivity').value = items.sensitivity;
         document.getElementById('custom_new_tab').checked = items.custom_new_tab;
+    });
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
