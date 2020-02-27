@@ -11,12 +11,9 @@ function restore_options() {
     chrome.storage.sync.get({
         animation: true,
         sensitivity: 50,
-        custom_new_tab: false,
-        custom_new_tab_url: 'blank'
     }, function (items) {
         document.getElementById('animation').checked = items.animation;
         document.getElementById('sensitivity').value = items.sensitivity;
-        document.getElementById('custom_new_tab').checked = items.custom_new_tab;
     });
 }
 
